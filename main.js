@@ -24,11 +24,12 @@ let knappContainer = document.querySelector("#container")
 let svar = document.querySelector("#svar")
 
 let rätta = document.querySelector("#rätta")
+let om = document.querySelector("#nytt")
 
 rätta.addEventListener("click", () => {
   fråga1.forEach(svar => {
     if (svar.checked){
-      svar1=svar.value; 
+      svar1 = svar.value; 
       if (svar1 === "Skånela IF"){
         resultat++;
         console.log(resultat)
@@ -37,7 +38,7 @@ rätta.addEventListener("click", () => {
   })
   fråga2.forEach(svar => {
     if (svar.checked){
-      svar2=svar.value; 
+      svar2 = svar.value; 
       if (svar2 === "Bålsta IF"){
         resultat++;
         console.log(resultat)
@@ -46,16 +47,19 @@ rätta.addEventListener("click", () => {
   })
   fråga3.forEach(svar => {
     if (svar.checked){
-      svar3=svar.value; 
+      svar3 = svar.value; 
       if (svar3 === "16 år"){
         resultat++;
         console.log(resultat)
       }
     }
   })
+  let rSvar1 = document.querySelector("#4a")
+  let rSvar2 = document.querySelector("#4c")
+
   fråga4.forEach(svar => {
     if (svar.checked){
-      svar4=svar.value; 
+      svar4 = svar.value; 
       if (svar4 === "Skånela IF"){
         resultat++;
         console.log(resultat)
@@ -64,7 +68,7 @@ rätta.addEventListener("click", () => {
   })
   fråga5.forEach(svar => {
     if (svar.checked){
-      svar5=svar.value; 
+      svar5 = svar.value; 
       if (svar5 === "En medalj"){
         resultat++;
         console.log(resultat)
@@ -73,7 +77,7 @@ rätta.addEventListener("click", () => {
   })
   fråga6.forEach(svar => {
     if (svar.checked){
-      svar6=svar.value; 
+      svar6 = svar.value; 
       if (svar6 === "Två gånger"){
         resultat++;
         console.log(resultat)
@@ -82,7 +86,7 @@ rätta.addEventListener("click", () => {
   })
   fråga7.forEach(svar => {
     if (svar.checked){
-      svar7=svar.value; 
+      svar7 = svar.value; 
       if (svar7 === "Hammarby IF HF"){
         resultat++;
         console.log(resultat)
@@ -109,7 +113,7 @@ rätta.addEventListener("click", () => {
   })
   fråga10.forEach(svar => {
     if (svar.checked){
-      svar10=svar.value; 
+      svar10 = svar.value; 
       if (svar10 === "All-star team JSM"){
         resultat++;
         console.log(resultat)
@@ -118,5 +122,15 @@ rätta.addEventListener("click", () => {
   })
   if (resultat <= 5){
     svar.innerText = "Du fick " + resultat + "/10 rätt. Tryck på börja om, om du vill göra det igen! ";
+  } else if (resultat > 5 && resultat <= 7 ){
+    svar.innerText = "Du fick " + resultat + "/10 rätt. Du klarade det nästan.";
+    svar.style.color = "orange"
+  } else {
+    svar.innerText = "Du fick " + resultat + "/10 rätt. Grattis du klarade quizet. ";
+    svar.style.color = "Green"
   }
+})
+
+om.addEventListener("click", () => {
+  location.reload();
 })
