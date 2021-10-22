@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div>
+  <div id="container">
   <span>Välkommen till detta quiz. Här kommer du få 10 fårgor som kommer att handla om Axel och Alex handbollskarriärer.
     för att klara quizet måste du få 8/10 rätt.<strong> Lycka till!
   </span></strong> 
@@ -35,7 +35,7 @@
   <label for="3b">7 år  </label>
   <input type="radio" name="3" id="3b" value="7 år">
   <label for="3c">16 år </label>
-  <input type="radio" name="3" id="3c" value="16år">
+  <input type="radio" name="3" id="3c" value="16 år">
 
   <h4> 4. Vilka klubbar Gjorde Axel respektive Alex sina debuter mot i Skånela IF:s A – lag? Pssst... Två korrekta svar </h4>
   <label for="4a">IF Hallby </label>
@@ -87,11 +87,14 @@
 
   <h4> 10. Vilket är Axels störta ögonblick i sin karrirär </h4>
   <label for="10a">All-star Team JSM </label>
-  <input type="radio" name="10" id="10a" value="All-star Team JSM">
+  <input type="radio" name="10" id="10a" value="All-star team JSM">
   <label for="10b">Partille cup final  </label>
   <input type="radio" name="10" id="10b" value="Partille cup final">
   <label for="10c">Norden cup guld </label>
   <input type="radio" name="10" id="10c" value="Norden cup guld">
+</div>
+<div id="knappContainer">
+  <h3 id="svar"></h3>
 </div>
 <button id="rätta" class="knapp">Rätta quizet</button> <button id="refresh" class="knapp">Börja om</button>
   <script src="main.js"></script>

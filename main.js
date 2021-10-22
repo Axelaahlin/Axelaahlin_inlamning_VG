@@ -20,6 +20,8 @@ let fråga10 = document.querySelectorAll("[name='10']");
 let svar10 = "";
 
 let resultat = 0;
+let knappContainer = document.querySelector("#container")
+let svar = document.querySelector("#svar")
 
 let rätta = document.querySelector("#rätta")
 
@@ -46,7 +48,7 @@ rätta.addEventListener("click", () => {
     if (svar.checked){
       svar3=svar.value; 
       if (svar3 === "16 år"){
-        resultat =+ 1;
+        resultat++;
         console.log(resultat)
       }
     }
@@ -55,9 +57,66 @@ rätta.addEventListener("click", () => {
     if (svar.checked){
       svar4=svar.value; 
       if (svar4 === "Skånela IF"){
-        resultat =+ 1;
+        resultat++;
         console.log(resultat)
       }
     }
   })
+  fråga5.forEach(svar => {
+    if (svar.checked){
+      svar5=svar.value; 
+      if (svar5 === "En medalj"){
+        resultat++;
+        console.log(resultat)
+      }
+    }
+  })
+  fråga6.forEach(svar => {
+    if (svar.checked){
+      svar6=svar.value; 
+      if (svar6 === "Två gånger"){
+        resultat++;
+        console.log(resultat)
+      }
+    }
+  })
+  fråga7.forEach(svar => {
+    if (svar.checked){
+      svar7=svar.value; 
+      if (svar7 === "Hammarby IF HF"){
+        resultat++;
+        console.log(resultat)
+      }
+    }
+  })
+  fråga8.forEach(svar => {
+    if (svar.checked){
+      svar8 = svar.value; 
+      if (svar8 === "Tre säsonger"){
+        resultat++;
+        console.log(resultat)
+      }
+    }
+  })
+  fråga9.forEach(svar => {
+    if (svar.checked){
+      svar9 = svar.value; 
+      if (svar9 === "Fyra år"){
+        resultat++;
+        console.log(resultat)
+      }
+    }
+  })
+  fråga10.forEach(svar => {
+    if (svar.checked){
+      svar10=svar.value; 
+      if (svar10 === "All-star team JSM"){
+        resultat++;
+        console.log(resultat)
+      }
+    }
+  })
+  if (resultat <= 5){
+    svar.innerText = "Du fick " + resultat + "/10 rätt. Tryck på börja om, om du vill göra det igen! ";
+  }
 })
