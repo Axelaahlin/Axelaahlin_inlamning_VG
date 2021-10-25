@@ -142,6 +142,7 @@ rätta.addEventListener("click", () => {
     alert("Nu försöker du göra någonting du inte får! Tryck på RESTART om du vill göra om det.")
     svar.innerText = ""
   }
+  rätta.remove();
 })
 
 om.addEventListener("click", () => {
