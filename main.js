@@ -19,6 +19,7 @@ let svar9 = "";
 let fråga10 = document.querySelectorAll("[name='10']");
 let svar10 = "";
 
+
 let resultat = 0;
 let knappContainer = document.querySelector("#container")
 let svar = document.querySelector("#svar")
@@ -54,18 +55,24 @@ rätta.addEventListener("click", () => {
       }
     }
   })
-  let rSvar1 = document.querySelector("#4a")
-  let rSvar2 = document.querySelector("#4c")
+
+  let rättSvar1 = document.querySelector("#hallby")
+  let rättSvar2 = document.querySelector("#rimbo")
+  let rättaSvar = [];
 
   fråga4.forEach(svar => {
     if (svar.checked){
-      svar4 = svar.value; 
-      if (svar4 === "Skånela IF"){
-        resultat++;
-        console.log(resultat)
-      }
+      rättaSvar.push(svar.value);
     }
   })
+  if (rättaSvar.length === 3){
+    alert("Du har kryssade tyvärr i för många alternativ på fråga 4.")
+    rätta.remove();
+  } else if (rättSvar1.checked && rättSvar2.checked){
+    resultat++;
+    console.log(resultat)
+  }
+
   fråga5.forEach(svar => {
     if (svar.checked){
       svar5 = svar.value; 
@@ -105,7 +112,7 @@ rätta.addEventListener("click", () => {
   fråga9.forEach(svar => {
     if (svar.checked){
       svar9 = svar.value; 
-      if (svar9 === "Fyra år"){
+      if (svar9 === "Fem år"){
         resultat++;
         console.log(resultat)
       }
@@ -120,8 +127,9 @@ rätta.addEventListener("click", () => {
       }
     }
   })
+
   if (resultat <= 5){
-    svar.innerText = "Du fick " + resultat + "/10 rätt. Tryck på börja om, om du vill göra det igen! ";
+    svar.innerText = "Du fick " + resultat + "/10 rätt. Tryck på RESTART, om du vill göra det igen! ";
   } else if (resultat > 5 && resultat <= 7 ){
     svar.innerText = "Du fick " + resultat + "/10 rätt. Du klarade det nästan.";
     svar.style.color = "orange"
@@ -129,8 +137,35 @@ rätta.addEventListener("click", () => {
     svar.innerText = "Du fick " + resultat + "/10 rätt. Grattis du klarade quizet. ";
     svar.style.color = "Green"
   }
+  if (resultat === 11){
+    rätta.remove();
+    alert("Nu försöker du göra någonting du inte får! Tryck på RESTART om du vill göra om det.")
+    svar.innerText = ""
+  }
 })
 
 om.addEventListener("click", () => {
   location.reload();
-})
+}); 
+
+
+
+
+let mode = document.querySelector("#mode");
+let body = document.querySelector("body")
+let modet = 0
+
+
+
+
+mode.addEventListener("click", () => {
+  modet++;
+if ((modet%2) == 1){
+body.style.background = "Black"
+body.style.color = "White"
+} else {
+body.style.background = "white"
+body.style.color = "Black"
+}
+});
+

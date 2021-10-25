@@ -5,13 +5,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Axel och Alex quiz</title>
-  <h1>Axel och Alex quiz</h1>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <h1>Axel och Alex quiz</h1> <button class="knapp" id="mode">Dark/Light mode</button>
   <div id="container">
   <span id="span">Välkommen till detta quiz. Här kommer du få 10 fårgor som kommer att handla om Axel och Alex handbollskarriärer.
-    för att klara quizet måste du få 8/10 rätt.<strong> Lycka till!
+    För att klara quizet måste du få 8/10 rätt.<strong> Lycka till!
   </span></strong> 
   <h4 class="fråga"> 1. Vilken klubb är Axel Åhlin Anderssons moderklubb?</h4>
   <label for="1a">Bålsta IF </label>
@@ -26,7 +26,7 @@
   <input type="radio" name="2" id="2a" value="Enköping HF">
   <label for="2b">Skånela IF </label>
   <input type="radio" name="2" id="2b" value="Skånela IF">
-  <label for="2c">Bålsta IF </label>
+  <label for="2c">Bålsta IF </label>  
   <input type="radio" name="2" id="2c" value="Bålsta IF">
 
   <h4 class="fråga"> 3. Hur många år spelade Axel i Skånela IF?</h4>
@@ -37,13 +37,13 @@
   <label for="3c">16 år </label>
   <input type="radio" name="3" id="3c" value="16 år">
 
-  <h4 class="fråga"> 4. Vilka klubbar Gjorde Axel respektive Alex sina debuter mot i Skånela IF:s A – lag? Pssst... Två korrekta svar </h4>
-  <label for="4a">IF Hallby </label>
-  <input type="checkbox" name="4" id="4a" value="IF Hallby">
+  <h4 class="fråga"> 4. Vilka klubbar Gjorde Axel respektive Alex sina debuter mot i Skånela IF:s A – lag? Två korrekta svar!</h4>
+  <label for="hallby">IF Hallby </label>
+  <input type="checkbox" name="4" id="hallby">
   <label for="4b">IK Sävehof  </label>
-  <input type="checkbox" name="4" id="4b" value="IK Sävehof">
-  <label for="4c">Rimbo HK   </label>
-  <input type="checkbox" name="4" id="4c" value="Rimbo HK">
+  <input type="checkbox" name="4" id="sävehof">
+  <label for="rimbo">Rimbo HK   </label>
+  <input type="checkbox" name="4" id="rimbo">
 
   <h4 class="fråga"> 5. Hur många junior-SM medaljer har Axel Åhlin Andersson?</h4>
   <label for="5a"> En medalj </label>
@@ -80,8 +80,8 @@
   <h4 class="fråga"> 9. Hur gammal var Axel när han började spela handboll? </h4>
   <label for="9a">Två år  </label>
   <input type="radio" name="9" id="9a" value="Två år">
-  <label for="9b">Fyra år  </label>
-  <input type="radio" name="9" id="9b" value="Fyra år">
+  <label for="9b">Fem år  </label>
+  <input type="radio" name="9" id="9b" value="Fem år">
   <label for="9c">Åtta år </label>
   <input type="radio" name="9" id="9c" value="Åtta år">
 
@@ -96,8 +96,8 @@
 <div id="knappContainer">
   <h3 id="svar"></h3>
 </div>
-<button id="rätta" class="knapp">Rätta quizet</button>
-<button id="nytt">Börja om</button>
+<button id="rätta" class="knapp">Check Answers</button>
+<button id="nytt">Restart</button>
   <script src="main.js"></script>
 </body>
 </html>
