@@ -19,6 +19,9 @@ let svar9 = "";
 let fråga10 = document.querySelectorAll("[name='10']");
 let svar10 = "";
 
+let body = document.querySelector("body");
+body.style.background = "lightblue"
+
 
 let resultat = 0;
 let knappContainer = document.querySelector("#container")
@@ -66,7 +69,6 @@ rätta.addEventListener("click", () => {
     }
   })
   if (rättaSvar.length === 3){
-    alert("Du har kryssade tyvärr i för många alternativ på fråga 4.")
     rätta.remove();
   } else if (rättSvar1.checked && rättSvar2.checked){
     resultat++;
@@ -149,23 +151,16 @@ om.addEventListener("click", () => {
   location.reload();
 }); 
 
-
-
-
 let mode = document.querySelector("#mode");
-let body = document.querySelector("body")
 let modet = 0
-
-
-
 
 mode.addEventListener("click", () => {
   modet++;
 if ((modet%2) == 1){
-body.style.background = "Black"
+body.style.background = "black"
 body.style.color = "White"
 } else {
-body.style.background = "white"
+body.style.background = "lightblue"
 body.style.color = "Black"
 }
 });
